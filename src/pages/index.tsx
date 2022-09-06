@@ -120,7 +120,7 @@ export default function IndexPage() {
                         <img className="w-full rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
                         <div className="text-2xl font-medium">
                             <p>Isabella Alsina</p>
-                            <p className="text-sm opacity-50">Dispatcher</p>
+                            <p className="text-sm opacity-50">Billing, Dispatcher</p>
                         </div>
                     </div>
 
@@ -129,6 +129,14 @@ export default function IndexPage() {
                         <div className="text-2xl font-medium">
                             <p>Sebastian Alsina</p>
                             <p className="text-sm opacity-50">Tech & Communications</p>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <img className="w-full rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
+                        <div className="text-2xl font-medium">
+                            <p>Cesar Alsina</p>
+                            <p className="text-sm opacity-50">Billing, Accounting</p>
                         </div>
                     </div>
                 </div>
