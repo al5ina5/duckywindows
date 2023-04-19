@@ -1,9 +1,9 @@
+import axios from "axios";
+import classNames from 'classnames';
 import { useEffect, useState } from "react";
+import validator from 'validator';
 import Modal from "./Modal";
 import Input from "./input";
-import axios from "axios";
-import classNames from 'classnames'
-import validator from 'validator';
 
 export default function BookingComponent({ visible, onClose }) {
 
@@ -47,7 +47,7 @@ export default function BookingComponent({ visible, onClose }) {
         </Modal> */}
 
         <Modal visible={visible} onClose={onClose}>
-            <div className="space-y-8">
+            <form className="block space-y-8">
                 <div className="space-y-2">
                     {/* <p className="font-medium opacity-50 text-center">Booking</p> */}
                     <p className="text-3xl font-serif font-bold">Complete your 2-minute booking request.</p>
@@ -85,7 +85,7 @@ export default function BookingComponent({ visible, onClose }) {
                         <button onClick={() => reset()} className="opacity-50 text-xs underline">Send another booking request</button>
                     </div>
                 </>}
-            </div>
+            </form>
         </Modal>
     </>
 }

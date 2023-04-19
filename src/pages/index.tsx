@@ -12,7 +12,7 @@ export default function IndexPage() {
 
             <div className="w-full bg-blue-600 text-white z-10  p-4">
                 <div className="max-w-5xl mx-auto flex space-x-8">
-                    <p className='flex-1 text-xs md:text-base '>To book your appointment, <a className='underline font-bold' href="tel:2392160011">give us call</a> or <button onClick={() => setShowBookingComponent(true)} className='underline font-bold' >complete 2 minute booking</button> online.</p>
+                    <p className='flex-1 text-sm md:text-base '>To book your appointment, <a className='underline font-bold' href="tel:2392160011">give us call</a> or <button onClick={() => setShowBookingComponent(true)} className='underline font-bold' >complete 2 minute booking</button> online.</p>
 
                     <p className='space-x-4'>
                         <i className='fas fa-phone'></i>
@@ -48,17 +48,17 @@ export default function IndexPage() {
             <div className="p-12 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-white bg-gradient-to-tr from-blue-400 to-blue-600 shadow-xl rounded-2xl p-6 md:p-12 space-y-2">
                     <p className="text-4xl font-extrabold">Fast.</p>
-                    <p className="opacity-75 text-lg">Book your appointment in under 2 minutes and forget. Poof. Windows are clean. Like it was done by some ninjas.</p>
+                    <p className="opacity-75 text-xl md:text-2xl">Book your appointment in under 2 minutes and forget. Poof. Windows are clean. Like it was done by some ninjas.</p>
                 </div>
                 <div className="md:-mt-12">
                     <div className="text-white bg-gradient-to-b from-indigo-400 to-indigo-600 shadow-xl rounded-2xl p-6 md:p-12 space-y-2">
                         <p className="text-4xl font-extrabold">Friendly.</p>
-                        <p className="opacity-75 text-lg">Run by humans who live next-door to you. We strive to give you a pleasent and memorable experience, so you can count on us everytime.</p>
+                        <p className="opacity-75 text-xl md:text-2xl">Run by humans who live next-door to you. We strive to give you a pleasent and memorable experience, so you can count on us everytime.</p>
                     </div>
                 </div>
                 <div className="text-white bg-gradient-to-br from-purple-400 to-purple-600 shadow-xl rounded-2xl p-6 md:p-12 space-y-2">
                     <p className="text-4xl font-extrabold">Familiar.</p>
-                    <p className="opacity-75 text-lg">Ducky Windows is a 100% family-owned company based in right at home — in the heart of the Golden Gate Estates.</p>
+                    <p className="opacity-75 text-xl md:text-2xl">Ducky Windows is a 100% family-owned company based in right at home — in the heart of the Golden Gate Estates.</p>
                 </div>
             </div>
             <div className='text-center space-y-8 p-12 pb-24 md:pb-48'>
@@ -78,7 +78,7 @@ export default function IndexPage() {
             </div>
 
             <div className='h-96 bg-cover bg-center flex items-center justify-center p-12' style={{ backgroundImage: 'url("/img/blue-banner.jpg")' }}>
-                <p className='text-blue-900 text-7xl md:text-8xl font-extrabold'>Get it done right.</p>
+                <p className='text-blue-900 text-7xl text-center md:text-8xl font-extrabold'>Get it done right.</p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-12 md:space-y-24 p-6 py-24 md:py-48">
@@ -165,12 +165,27 @@ export default function IndexPage() {
                 </div>
             </div>
 
-
-
-            <div className="p-6 md:p-12 text-xs md:text-2xl flex items-center">
-                <p className="flex-1 font-medium">🦆 Ducky Windows</p>
-                <p className="opacity-25 font-medium">Based in Naples, FL</p>
+            <div>
+                <div className="p-6 md:p-12 space-y-8">
+                    <div className='flex gap-4 whitespace-nowrap flex-wrap font-medium'>
+                        <a href="">Book an Appointment</a>
+                        <a href="">Call us</a>
+                        <a href="">Email us</a>
+                        <a href=""><i className='fab fa-facebook'></i></a>
+                        <a href=""><i className='fab fa-twitter'></i></a>
+                    </div>
+                    <div className=' text-xs md:text-2xl flex items-center'>
+                        <p className="flex-1 font-medium">🦆 Ducky Windows</p>
+                        <p className="opacity-25 font-medium">Based in Naples, FL</p>
+                    </div>
+                </div>
             </div>
+
+            {/* <div className='shadow-inner bg-black text-white'>
+                <div className='p-12'>
+                    <p className='text-8xl font-black'>Need a website like this one for your local buisness?</p>
+                </div>
+            </div> */}
         </>
     )
 }
