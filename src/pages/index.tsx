@@ -36,7 +36,7 @@ export default function IndexPage() {
 
                 <div className="flex flex-col md:flex-row gap-12">
                     <div>
-                        <p className='text-6xl md:text-8xl font-serif font-bold text-blue-500'>Window washing in the Golden Gate Estates.</p>
+                        <p className='text-5xl md:text-8xl font-serif font-bold text-blue-500'>Window washing in the Golden Gate Estates.</p>
                     </div>
                     <div>
                         <img className="w-32 md:w-96" src="/img/duck.png" alt="" />
@@ -91,7 +91,7 @@ export default function IndexPage() {
             </div>
 
             <div className='bg-cover bg-center flex items-center justify-center p-24 md:p-48' style={{ backgroundImage: 'url("/img/blue-banner-2.png")' }}>
-                <p className='text-blue-900 max-w-4xl mx-auto text-7xl text-center md:text-8xl font-extrabold'>No streaks, grime, or bugs. Get it done right the first time.</p>
+                <p className='text-blue-900 max-w-4xl mx-auto text-4xl md:text-7xl text-center md:text-8xl font-extrabold'>No streaks, grime, or bugs. Get it done right the first time.</p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-12 md:space-y-24 p-6 py-24 md:py-48">
