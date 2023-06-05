@@ -189,11 +189,11 @@ export default function IndexPage() {
             <div>
                 <div className="p-6 md:p-12 space-y-8">
                     <div className='flex gap-4 whitespace-nowrap flex-wrap font-medium'>
-                        <a href="">Book an Appointment</a>
-                        <a href="">Call us</a>
-                        <a href="">Email us</a>
-                        <a href=""><i className='fab fa-facebook'></i></a>
-                        <a href=""><i className='fab fa-twitter'></i></a>
+                        <button onClick={() => setShowBookingComponent(true)}>Book an Appointment</button>
+                        <a href="tel:2392160011">Call us</a>
+                        <a href="mailto:info@duckywindows.com">Email us</a>
+                        {/* <a href=""><i className='fab fa-facebook'></i></a> */}
+                        {/* <a href=""><i className='fab fa-twitter'></i></a> */}
                     </div>
                     <div className=' text-xs md:text-2xl flex items-center'>
                         <p className="flex-1 font-medium">🦆 Ducky Windows</p>
