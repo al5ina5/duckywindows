@@ -26,8 +26,8 @@ export default function IndexPage() {
                     <p className='flex-1 text-sm md:text-base '>To book your appointment, <a className='underline font-bold' href="tel:2392160011">give us call</a> or <button onClick={() => setShowBookingComponent(true)} className='underline font-bold' >complete 2 minute booking</button> online.</p>
 
                     <p className='space-x-4'>
-                        <i className='fas fa-phone'></i>
-                        <i className='fas fa-calendar'></i>
+                        <a href="tel:2392160011"><i className='fas fa-phone' /></a>
+                        <button onClick={() => setShowBookingComponent(true)}><i className='fas fa-calendar' /></button>
                     </p>
                 </div>
             </div>
