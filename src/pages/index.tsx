@@ -39,7 +39,7 @@ export default function IndexPage() {
                         <p className='text-5xl md:text-8xl font-serif font-bold text-blue-500'>Window washing in the Golden Gate Estates.</p>
                     </div>
                     <div>
-                        <img className="w-32 md:w-96" src="/img/duck.png" alt="" />
+                        <img className="w-32 md:w-96" src="/img/logo-2.png" alt="" />
                     </div>
                 </div>
 
