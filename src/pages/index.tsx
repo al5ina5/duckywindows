@@ -2,13 +2,24 @@ import Typed from 'react-typed'
 import { motion } from 'framer-motion'
 import BookingComponent from '../components/BookingComponent'
 import { useState } from 'react'
+import Portal from '../components/Portal'
 
 export default function IndexPage() {
 
     const [showBookingComponent, setShowBookingComponent] = useState(false)
+
     return (
         <>
             <BookingComponent visible={showBookingComponent} onClose={() => setShowBookingComponent(false)} />
+
+            {/* <Portal>
+                <div className='fixed bottom-0 w-full z-10 p-6 bg-yellow-400'>
+                    <div className='max-w-screen mx-auto'>
+                        Special offer available for new customers.
+                        Get your windows done for just $99.
+                    </div>
+                </div>
+            </Portal> */}
 
             <div className="w-full bg-blue-600 text-white z-10  p-4">
                 <div className="max-w-5xl mx-auto flex space-x-8">
@@ -20,7 +31,6 @@ export default function IndexPage() {
                     </p>
                 </div>
             </div>
-
 
             <div className='max-w-5xl mx-auto p-12 py-24 md:py-48 space-y-12'>
 
@@ -62,23 +72,26 @@ export default function IndexPage() {
                 </div>
             </div>
             <div className='text-center space-y-8 p-12 pb-24 md:pb-48'>
-                <div className='text-3xl font-medium opacity-25'>Complete a 2-minute booking request.</div>
+                <div className="space-y-2">
+                    <div className='text-3xl font-medium opacity-50'>Complete a 2-minute booking request.</div>
+                    <div className='text-xl font-medium opacity-25'>First time buyer $10 window on average. </div>
+                </div>
                 <motion.button onClick={() => setShowBookingComponent(true)} animate={{ rotate: ['2deg', '-2deg', '2deg'], scale: [0.9, 1.1, 0.9] }} transition={{ repeat: Infinity, duration: 12 }} className="inline-block shadow-xl p-2 text-6xl font-serif font-extrabold rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600" href="">
                     <div className='bg-white p-3 md:p-6 px-6 md:px-12 text-3xl md:text-5xl font-extrabold rounded-2xl'>
-                        <span className='text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600'>Book Now</span>
+                        <span className='text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-purple-600'>Book Quote Now</span>
                     </div>
                 </motion.button>
 
                 <div>
                     {/* <p className='text-xl opacity-50 font-medium'><a href="tel:2399197712" className='underline'>239 919 7712</a></p> */}
-                    <p className='text-lg opacity-50 font-medium'>or contact us anytime at<br className='block md:hidden' /> <a href="tel:2399197712" className='underline'>239 919 7712</a></p>
+                    <p className='text-lg opacity-50 font-medium'>or contact us anytime at<br className='block md:hidden' /> <a href="tel:2392160011" className='underline'>239 216 0011</a></p>
                     <p className='text-base opacity-40 font-medium'>Naples, Bonita Springs, and Beyond</p>
 
                 </div>
             </div>
 
-            <div className='h-96 bg-cover bg-center flex items-center justify-center p-12' style={{ backgroundImage: 'url("/img/blue-banner.jpg")' }}>
-                <p className='text-blue-900 text-7xl text-center md:text-8xl font-extrabold'>Get it done right.</p>
+            <div className='bg-cover bg-center flex items-center justify-center p-24 md:p-48' style={{ backgroundImage: 'url("/img/blue-banner-2.png")' }}>
+                <p className='text-blue-900 max-w-4xl mx-auto text-7xl text-center md:text-8xl font-extrabold'>No streaks, grime, or bugs. Get it done right the first time.</p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-12 md:space-y-24 p-6 py-24 md:py-48">
@@ -88,80 +101,88 @@ export default function IndexPage() {
                     <p className="opacity-50 text-center font-medium text-blue-400">Let us show you, neighbor.</p>
                 </div>
 
-                <ul className="grid place-content-center sm:grid-cols-2 gap-8">
-                    <li className="flex">
-                        <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">01.</div>
-                        <div>
-                            <div className="text-xl font-bold">Windows</div>
-                            <p className="max-w-xs py-2">We love numbers! We collect data and insights, analyze
-                                them then take the time to learn about your objectives, ask the right questions to understand your
-                                business.</p>
-                        </div>
-                    </li>
-                    <li className="flex">
-                        <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">02.</div>
-                        <div>
-                            <div className="text-xl font-bold">Glass French Doors</div>
-                            <p className="max-w-xs py-2">Solutions are born from proper research, hard work, and
-                                strong strategy. We build data-driven roadmaps for every project to make pave the way to success.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="flex">
-                        <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">03.</div>
-                        <div>
-                            <div className="text-xl font-bold">Sliding Glass Doors</div>
-                            <p className="max-w-xs py-2">We design the right solution for your business. We
-                                craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="flex">
-                        <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">04.</div>
-                        <div>
-                            <div className="text-xl font-bold">Fogged Glass</div>
-                            <p className="max-w-xs py-2">We build the right solution for your business. We
-                                craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="flex">
-                        <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">05.</div>
-                        <div>
-                            <div className="text-xl font-bold">Deployment</div>
-                            <p className="max-w-xs py-2">We build the right solution for your business. We
-                                craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                    <div className="space-y-4">
-                        <div className="rounded-2xl overflow-hidden p-2 rainbow bg-orange-500">
-                            <img className="rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
+                <div className='space-y-8'>
+                    {/* <p className='text-center text-3xl font-bold opacity-25 uppercase tracking-widest'>Our services</p> */}
+                    <ul className="grid place-content-center sm:grid-cols-2 gap-8">
+                        <li className="flex">
+                            <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">01.</div>
+                            <div>
+                                <div className="text-2xl font-bold">Windows</div>
+                                <p className="text-xl max-w-xs py-2">All kinds of windows, any size on the first floor. No matter the grime, we'll make it look brand new.</p>
+                            </div>
+                        </li>
+                        <li className="flex">
+                            <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">02.</div>
+                            <div>
+                                <div className="text-2xl font-bold">Glass French Doors</div>
+                                <p className="text-xl max-w-xs py-2">
+                                    Some windows have features — that doesn't scare us. We'll get the glass between all the mullions to make sure your glass is crystal clear.
+                                </p>
+                            </div>
+                        </li>
+                        <li className="flex">
+                            <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">03.</div>
+                            <div>
+                                <div className="text-2xl font-bold">Sliding Glass Doors</div>
+                                <p className="text-xl max-w-xs py-2">
+                                    Sliding glass doors are like big windows — we'll make sure to treat it with care so you've got the best experience when walking out to your patio.
+                                </p>
+                            </div>
+                        </li>
+                        <li className="flex">
+                            <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">04.</div>
+                            <div>
+                                <div className="text-2xl font-bold">Fogged Glass</div>
+                                <p className="text-xl max-w-xs py-2">
+                                    Bathrooms tend to have fogged windows for privacy. We'll clean, ensuring to keep the fogging intact to keep your privacy at the forefront.
+                                </p>
+                            </div>
+                        </li>
+                        {/* <li className="flex">
+                            <div className="px-4 text-4xl md:text-5xl font-extralight text-blue-400 opacity-50">05.</div>
+                            <div>
+                                <div className="text-xl font-bold">Deployment</div>
+                                <p className="max-w-xs py-2">We build the right solution for your business. We
+                                    craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.
+                                </p>
+                            </div>
+                        </li> */}
+                    </ul>
+                    <p className='text-2xl opacity-25 text-center max-w-xl mx-auto'>Glass is our specialty. If you've got glass, we'll get it done. Just make sure you don't forget the glass is there, we don't want anyone getting hurt on their brand-new crystal clear doors. <span className='underline'>Yes, that was a joke.</span></p>
+                </div>
+
+            </div>
+
+            <div className='bg-yellow-400 p-12 md:p-24'>
+                <div className="mx-auto max-w-lg space-y-12">
+                    <div className="space-y-8">
+                        <div className="rounded-2xl overflow-hidden border-4 border-b-8 border-black transform -rotate-2">
+                            <img className="rounded-2xl" src="/img/sam.jpg" alt="" />
                         </div>
                         <div className="text-2xl font-medium">
                             <p>Samuel Alsina</p>
                             <p className="text-sm opacity-50">Founder, Window Professional</p>
                         </div>
                     </div>
-
-                    {/* <div className="space-y-4">
-                        <img className="w-full rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
-                        <div className="text-2xl font-medium">
-                            <p>Isabella Alsina</p>
-                            <p className="text-sm opacity-50">Billing, Dispatcher</p>
-                        </div>
-                    </div> */}
-
-                    <div className="space-y-4">
-                        <img className="w-full rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
-                        <div className="text-2xl font-medium">
-                            <p>Sebastian Alsina</p>
-                            <p className="text-sm opacity-50">Tech & Communications</p>
-                        </div>
+                    <div>
+                        <p className='text-xl font-medium opacity-50'>"Samuel Alsina has 5+ years of experience in the window washing industry. Known for his charisma and family-oriented work-style, Samuel has always strived to provide the friendliest services in Naples."</p>
                     </div>
+                    {/* <div className="space-y-4">
+                            <img className="w-full rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
+                            <div className="text-2xl font-medium">
+                                <p>Isabella Alsina</p>
+                                <p className="text-sm opacity-50">Billing, Dispatcher</p>
+                            </div>
+                        </div>
+                
+                        <div className="space-y-4">
+                            <img className="w-full rounded-2xl" src="https://tailus.io/sources/blocks/classic/preview/images/woman1.jpg" alt="" />
+                            <div className="text-2xl font-medium">
+                                <p>Sebastian Alsina</p>
+                                <p className="text-sm opacity-50">Tech & Communications</p>
+                            </div>
+                        </div> */}
                 </div>
             </div>
 

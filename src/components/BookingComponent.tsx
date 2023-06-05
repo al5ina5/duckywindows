@@ -51,7 +51,7 @@ export default function BookingComponent({ visible, onClose }) {
                 <div className="space-y-2">
                     {/* <p className="font-medium opacity-50 text-center">Booking</p> */}
                     <p className="text-3xl font-serif font-bold">Complete your 2-minute booking request.</p>
-                    <p className="text-lg opacity-50">You can also <a className="underline">give us a call at 239 919 0092</a> to complete your booking over the phone.</p>
+                    <p className="text-lg opacity-50">You can also <a className="underline">give us a call at 239 216 0011</a> to complete your booking over the phone.</p>
                 </div>
 
                 {state !== 'complete' && <>
@@ -59,13 +59,13 @@ export default function BookingComponent({ visible, onClose }) {
                         <Input autoFocus label="Name *" placeholder="Billybob Saunders" value={name} onChange={e => setName(e.target.value)} />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <Input label="Email Address" placeholder="help@duckywindows.com" type='email' value={email} onChange={e => setEmail(e.target.value)} />
-                            <Input label="Phone Number *" placeholder="239 919 0029" type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
+                            <Input label="Phone Number *" placeholder="239 216 0011" type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
                         </div>
                         <Input label="Home Address *" placeholder="2211 Sunshine Street, Naples FL, 34120" value={address} onChange={e => setAddress(e.target.value)} />
                         <Input label="Optional Additional Comments" placeholder="Can you guys clean my fish tank glass?" value={comments} onChange={e => setComments(e.target.value)} />
                     </div>
 
-                    {state === 'error' && <p className="text-red-600 font-medium text-sm">Oops! Looks like an unexpected error occurred. Please try again later or <a href="tel:2399199999" className="underline">give us a call</a>. The robots are sorry about that!</p>}
+                    {state === 'error' && <p className="text-red-600 font-medium text-sm">Oops! Looks like an unexpected error occurred. Please try again later or <a href="tel:2392160011" className="underline">give us a call</a>. The robots are sorry about that!</p>}
                 </>}
 
                 <div className="bg-gray-100 border text-sm font-medium p-4 rounded text-gray-600 space-y-2">
