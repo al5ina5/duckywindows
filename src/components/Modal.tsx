@@ -10,7 +10,7 @@ export default function Modal({ visible, onClose, children }) {
                         initial={{ opacity: '0' }}
                         animate={{ opacity: [0, 1] }}
                         exit={{ opacity: 0 }}
-                        className="fixed z-50 inset-0 flex md:items-center justify-center bg-black bg-opacity-90 p-6" onClick={() => onClose()}>
+                        className="fixed z-50 inset-0 flex lg:items-center justify-center bg-black bg-opacity-90 p-6" onClick={() => onClose()}>
                         <motion.div
                             // initial={{ translateX:'-10' }}
                             // animate={{ opacity: [0, 1] }}
