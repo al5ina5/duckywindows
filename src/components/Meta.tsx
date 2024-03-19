@@ -19,8 +19,8 @@ const Meta = () => {
             <meta name="twitter:description" content={description} />
             <meta name="twitter:site" content={url} />
             <link rel="icon" type="image/png" href={`${url}/img/duck.png`} />
-            <meta property="og:image" content={`${url}/img/blue-banner.jpg`} />
-            <meta name="twitter:image" content={`${url}/img/blue-banner.jpg`} />
+            <meta property="og:image" content={`${url}/img/sam.jpg`} />
+            <meta name="twitter:image" content={`${url}/img/sam.jpg`} />
         </Head>
     )
 }
