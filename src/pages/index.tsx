@@ -23,7 +23,7 @@ export default function IndexPage() {
 
             <div className="w-full bg-blue-600 text-white z-10  p-4">
                 <div className="max-w-5xl mx-auto flex space-x-8">
-                    <p className='flex-1 text-sm md:text-base '>To book your appointment, <a className='underline font-bold' href="tel:2392160011">give us call</a> or <button onClick={() => setShowBookingComponent(true)} className='underline font-bold' >complete 2 minute booking</button> online.</p>
+                    <p className='flex-1 text-sm md:text-base '>To book your appointment, <a className='underline font-bold' href="tel:2392160011">give us call</a> or <button onClick={() => setShowBookingComponent(true)} className='underline font-bold' >complete 30-second booking</button> online.</p>
 
                     <p className='space-x-4'>
                         <a href="tel:2392160011"><i className='fas fa-phone' /></a>
@@ -58,7 +58,7 @@ export default function IndexPage() {
             <div className="p-12 max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-white bg-gradient-to-tr from-blue-400 to-blue-600 shadow-xl rounded-2xl p-6 md:p-12 space-y-2">
                     <p className="text-4xl font-extrabold">Fast.</p>
-                    <p className="opacity-75 text-xl md:text-2xl">Book your appointment in under 2 minutes and forget. Poof. Windows are clean. Like it was done by some ninjas.</p>
+                    <p className="opacity-75 text-xl md:text-2xl">Book your appointment in under 30-seconds and forget. Poof. Windows are clean. Like it was done by some ninjas.</p>
                 </div>
                 <div className="md:-mt-12">
                     <div className="text-white bg-gradient-to-b from-indigo-400 to-indigo-600 shadow-xl rounded-2xl p-6 md:p-12 space-y-2">
@@ -73,8 +73,9 @@ export default function IndexPage() {
             </div>
             <div className='text-center space-y-8 p-12 pb-24 md:pb-48'>
                 <div className="space-y-2">
-                    <div className='text-3xl font-medium opacity-50'>Complete a 2-minute booking request.</div>
-                    <div className='text-xl font-medium opacity-25'>First time buyer $10 window on average. </div>
+                    <div className='text-3xl mb-6 font-medium opacity-50'>Complete a 30-second booking request.</div>
+                    <div className='text-xl font-medium opacity-25'>First time clients $10/window ($15/french window) on average. +$5/window for repeating clients.</div>
+                    <div className='text-xl font-medium opacity-25'>Earn 5% off whole inside/outside or 10% off on entire house.</div>
                 </div>
                 <motion.button onClick={() => setShowBookingComponent(true)} animate={{ rotate: ['2deg', '-2deg', '2deg'], scale: [0.9, 1.1, 0.9] }} transition={{ repeat: Infinity, duration: 12 }} className="inline-block shadow-xl p-2 text-6xl font-serif font-extrabold rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600" href="">
                     <div className='bg-white p-3 md:p-6 px-6 md:px-12 text-3xl md:text-5xl font-extrabold rounded-2xl'>
@@ -90,8 +91,8 @@ export default function IndexPage() {
                 </div>
             </div>
 
-            <div className='bg-cover bg-center flex items-center justify-center p-24 md:p-48' style={{ backgroundImage: 'url("/img/blue-banner-2.png")' }}>
-                <p className='text-blue-900 max-w-4xl mx-auto text-4xl md:text-7xl text-center md:text-8xl font-extrabold'>No streaks, grime, or bugs. Get it done right the first time.</p>
+            <div className='bg-cover bg-center flex items-center justify-center p-24 md:p-48' style={{ backgroundImage: 'url("/img/man-wiping-window.jpeg")' }}>
+                <p className='text-blue-900 max-w-4xl mx-auto text-4xl text-center md:text-8xl font-extrabold'>No streaks, grime, or bugs. Get it done right the first time.</p>
             </div>
 
             <div className="max-w-4xl mx-auto space-y-12 md:space-y-24 p-6 py-24 md:py-48">

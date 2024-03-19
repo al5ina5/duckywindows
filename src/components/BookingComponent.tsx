@@ -50,7 +50,7 @@ export default function BookingComponent({ visible, onClose }) {
             <form className="block space-y-8">
                 <div className="space-y-2">
                     {/* <p className="font-medium opacity-50 text-center">Booking</p> */}
-                    <p className="text-3xl font-serif font-bold">Complete your 2-minute booking request.</p>
+                    <p className="text-3xl font-serif font-bold">Complete your 30-second booking request.</p>
                     <p className="text-lg opacity-50">You can also <a className="underline">give us a call at 239 216 0011</a> to complete your booking over the phone.</p>
                 </div>
 
