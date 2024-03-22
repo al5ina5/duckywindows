@@ -13,11 +13,13 @@ export default function BookingComponent({ visible, onClose }) {
     const [email, setEmail] = useState('')
     const [address, setAddress] = useState('')
     const [comments, setComments] = useState('')
+    const [contactMethod, setContactMethod] = useState('text-message')
 
-    const onSubmit = async () => {
+    const onSubmit = async (e) => {
         try {
+            e.preventDefault()
             setState('loading')
-            await axios.post('/api/booking', { name, phone, email, address, comments })
+            await axios.post('/api/booking', { name, phone, email, address, comments, contactMethod })
             setState('complete')
         } catch (error) {
             setState('error')
@@ -62,6 +64,16 @@ export default function BookingComponent({ visible, onClose }) {
                             <Input label="Phone Number *" placeholder="239 216 0011" type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
                         </div>
                         <Input label="Home Address *" placeholder="2211 Sunshine Street, Naples FL, 34120" value={address} onChange={e => setAddress(e.target.value)} />
+
+                        <div className="space-y-1">
+                            <label htmlFor="contact-method" className="text-base opacity-50 font-medium">Preferred Contact Method</label>
+                            <select value={contactMethod} onChange={e => setContactMethod(e.target.value)} name="contact-method" id="contact-method" className="border p-2 w-full rounded">
+                                <option value="text-message">Text Message</option>
+                                <option value="phone-call">Phone Call</option>
+                                <option value="email">Email</option>
+                            </select>
+                        </div>
+
                         <Input label="Optional Additional Comments" placeholder="Can you guys clean my fish tank glass?" value={comments} onChange={e => setComments(e.target.value)} />
                     </div>
 
