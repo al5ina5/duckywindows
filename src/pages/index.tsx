@@ -70,7 +70,7 @@ export default function IndexPage() {
                 <div className="space-y-2">
                     <div className='text-3xl mb-6 font-medium opacity-50'>Complete a 30-second booking request.</div>
                     <div className='text-xl font-medium opacity-25'>Pricing averages $10 per side of window ($15 per french window side).</div>
-                    <div className='text-xl font-medium opacity-25'>Earn 10% off whole inside/outside or 15% off on entire house.</div>
+                    <div className='text-xl font-medium opacity-25'>Enjoy 10% off whole inside/outside or 15% off on entire house.</div>
                 </div>
                 <motion.button onClick={() => setShowBookingComponent(true)} animate={{ rotate: ['2deg', '-2deg', '2deg'], scale: [0.9, 1.1, 0.9] }} transition={{ repeat: Infinity, duration: 12 }} className="inline-block shadow-xl p-2 text-6xl font-serif font-extrabold rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600" href="">
                     <div className='bg-white p-3 md:p-6 px-6 md:px-12 text-3xl md:text-5xl font-extrabold rounded-2xl'>
