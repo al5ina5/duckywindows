@@ -3,23 +3,17 @@ import { motion } from 'framer-motion'
 import BookingComponent from '../components/BookingComponent'
 import { useState } from 'react'
 import Portal from '../components/Portal'
+import PricingModal from '../components/PricingModal'
 
 export default function IndexPage() {
 
     const [showBookingComponent, setShowBookingComponent] = useState(false)
+    const [showPricingModal, setShowPricingModal] = useState(false)
 
     return (
         <>
+            <PricingModal visible={showPricingModal} onClose={() => setShowPricingModal(false)} />
             <BookingComponent visible={showBookingComponent} onClose={() => setShowBookingComponent(false)} />
-
-            {/* <Portal>
-                <div className='fixed bottom-0 w-full z-10 p-6 bg-yellow-400'>
-                    <div className='max-w-screen mx-auto'>
-                        Special offer available for new customers.
-                        Get your windows done for just $99.
-                    </div>
-                </div>
-            </Portal> */}
 
             <div className="w-full bg-blue-600 text-white z-10  p-4">
                 <div className="max-w-5xl mx-auto flex space-x-8">
@@ -72,10 +66,11 @@ export default function IndexPage() {
                 </div>
             </div>
             <div className='text-center space-y-8 p-12 pb-24 md:pb-48'>
+
                 <div className="space-y-2">
                     <div className='text-3xl mb-6 font-medium opacity-50'>Complete a 30-second booking request.</div>
-                    <div className='text-xl font-medium opacity-25'>First time clients $10/side ($15/french window side) on average. +$5/window for repeating clients.</div>
-                    <div className='text-xl font-medium opacity-25'>Earn 5% off whole inside/outside or 10% off on entire house.</div>
+                    <div className='text-xl font-medium opacity-25'>Pricing averages $10 per side of window ($15 per french window side).</div>
+                    <div className='text-xl font-medium opacity-25'>Earn 10% off whole inside/outside or 15% off on entire house.</div>
                 </div>
                 <motion.button onClick={() => setShowBookingComponent(true)} animate={{ rotate: ['2deg', '-2deg', '2deg'], scale: [0.9, 1.1, 0.9] }} transition={{ repeat: Infinity, duration: 12 }} className="inline-block shadow-xl p-2 text-6xl font-serif font-extrabold rounded-2xl bg-gradient-to-br from-blue-400 to-purple-600" href="">
                     <div className='bg-white p-3 md:p-6 px-6 md:px-12 text-3xl md:text-5xl font-extrabold rounded-2xl'>
@@ -89,6 +84,10 @@ export default function IndexPage() {
                     <p className='text-base opacity-40 font-medium'>Naples, Bonita Springs, and Beyond</p>
 
                 </div>
+
+                {/* <div>
+                    <button onClick={() => setShowPricingModal(true)} className='underline opacity-50 hover:no-underline'>View Pricing Information</button>
+                </div> */}
             </div>
 
             <div className='bg-cover bg-center flex items-center justify-center p-24 md:p-48' style={{ backgroundImage: 'url("/img/man-wiping-window.jpeg")' }}>
